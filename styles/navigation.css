@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Zorgt voor een consistentie in padding en margin */
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.9); /* Achtergrondkleur voor navigatie */
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex; /* Dit maakt van de navbar een flex layout */
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  display: flex; /* Dit maakt van de container een flex layout */
+  align-items: center;
+  color: rgb(11, 11, 11);
+  transition: background-color 0.3s; /* Voor een soepele overgang bij hover */
+}
+
+nav a:hover {
+  background-color: rgb(17, 97, 14);
+}
+
+a {
+  text-decoration: none;
+}
+
+.ham-menu {
+  /* Dit zorgt ervoor dat de navbar op het scherm blijft van de gebruiker. 
+     Als de gebruiker naar boven of beneden scrollt, blijft het menu hierdoor op dezelfde plek in de viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.9); /* Achtergrondkleur voor menu */
+  z-index: 9999;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5); /* Subtiele schaduw */
+  display: none; /* Dit geeft aan dat het menu standaard verborgen is */
+  flex-direction: column; 
+  list-style-type: none;
+  align-items: flex-start;
+  justify-content: flex-start;
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s ease; /* Voor een soepele overgang */
+  transform: translateX(-100%); /* Begin buiten het scherm */
+}
+
+/* Actieve klasse voor het tonen van het menu */
+.ham-menu.active {
+  display: flex; /* Menu zichtbaar maken */
+  transform: translateX(0); /* Menu komt in zicht */
+}
+
+.ham-menu li {
+  width: 100%;
+}
+
+svg {
+  color: black;
+  margin: 10px;
+  transition: transform 0.3s, color 0.3s; /* Voor soepele hover-effecten */
+}
+
+svg:hover {
+  transform: scale(1.1); /* Vergroot SVG bij hover */
+  color: rgb(255, 255, 255);
+}
+
+/* Terugknop voor navigatie */
+.return-arrow {
+  margin-top: 1em;
+}
+
+.return-arrow svg {
+  color: rgba(0, 0, 0, 0.322);
+}
