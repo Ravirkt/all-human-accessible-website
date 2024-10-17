@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const hammenu = document.querySelector('.ham-menu');
 
     menuToggle.addEventListener('click', function() {
-        hammenu.classList.add('active'); // Voeg actieve klasse toe
+        hammenu.classList.add('active'); 
     });
 
     closeMenuButton.addEventListener('click', function() {
-        hammenu.classList.remove('active'); // Verwijder actieve klasse
+        hammenu.classList.remove('active'); 
     });
 });
 
