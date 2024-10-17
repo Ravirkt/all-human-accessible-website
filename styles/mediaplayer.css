@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: radial-gradient(at top right, #3b0951, #773580);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  /* parentcontainer */
+  .story-player-container {
+    /* Dit zorgt ervoor dat er een grid layout wordt gemaakt in dit element */
+    display: grid;
+  
+    /* Dit maakt de columns aan voor de grid. in dit geval een column van 100vw */
+    grid-template-columns: 100vw;
+  
+    /* Dit maakt de rows aan voor de grid, de eerste row is 300px hoog en de tweede row is 30px, de derde is 70px hoog en de laaste row is 50px hoog */
+    grid-template-rows: 300px 30px 70px 50px;
+    margin-top: -6em;
+  
+    /* Dit zorgt ervoor dat de elementen horizontaal in het midden worden geplaatst */
+    justify-content: center;
+  
+    /* Dit zorgt ervoor dat de elementen verticaal in het midden worden geplaatst */
+    align-items: center;
+  
+    /* Dit zorgt voor een tussen ruimte tussen de grid elementen  */
+    gap: 4em;
+  }
+  
+  .story-video {
+    /* Plaatst het element in de grid, waarbij het zich positioneert van column 1 tot column 2 */
+    grid-column: 1 / 2;
+  
+    /* Plaatst het element in de grid, waarbij het zich positioneert van row 1 tot row 8 */
+    grid-row: 1 / 8;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px 1px rgb(190, 169, 199);
+    -webkit-mask-image: linear-gradient(to top, transparent 25%, black 75%);
+    mask-image: linear-gradient(
+      to bottom,
+      transparant 25% rgb(226, 210, 210) 75%
+    );
+    z-index: -9999;
+  }
+  
+  .story-title {
+    /* Plaatst het element in de grid, waarbij het zich positioneert van column 1 tot column 2 */
+    grid-column: 1 / 2;
+  
+    /* Plaatst het element in de grid, waarbij het zich positioneert van row 2 tot row 3 */
+    grid-row: 2 / 3;
+    text-align: center;
+    margin-top: 15em;
+  }
+  
+  .card-paragraph {
+    /* Plaatst het element in de grid, waarbij het zich positioneert van row 3 tot row 4 */
+    grid-row: 3 / 4;
+  
+    /* Plaatst het element in de grid, waarbij het zich positioneert van column 1 tot column 1, kon ook gewoon 1 schrijven. */
+    grid-column: 1 / 1;
+    text-align: center;
+    padding: 1em;
+    margin-top: 20em;
+  }
+  
+  .play-pauze {
+    /* Plaatst het element in de grid, waarbij het zich positioneert van row 4 tot row 5 */
+    grid-row: 4 / 5;
+  
+    /* Plaatst het element in de grid, waarbij het zich positioneert van column 1 tot column 1, kon ook gewoon 1 schrijven. */
+    grid-column: 1 / 1;
+    justify-self: center;
+    padding-top: 3em;
+    margin-top: 20em;
+  }
+  

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tumi Mundo</title>
+    <link rel="stylesheet" href="../styles/navigation.css" />
+    <link rel="stylesheet" href="../styles/mediaplayer.css" />
+  </head>
+
+  <body>
+    <header>
+      <section class="return-arrow">
+        <h3 hidden>Return to Playlist</h3>
+        <a href="../playlist.html" aria-label="Return to the playlist">
+          <svg
+            class="w-[30px] h-[30px] text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M13.729 5.575c1.304-1.074 3.27-.146 3.27 1.544v9.762c0 1.69-1.966 2.618-3.27 1.544l-5.927-4.881a2 2 0 0 1 0-3.088l5.927-4.88Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </section>
+    </header>
+  
+    <main class="story-player-container">
+      <video
+        class="story-video"
+        id="video-1"
+        autoplay
+        loop
+        playsinline
+        webkit-playsinline
+        muted
+        title="Background Music Funny Animation"
+        aria-label="Video background music">
+        <source src="../assets/Cartoon Background Music Funny Animation Free.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+  
+      <h2 class="story-title">The Bear and Mr. Frog</h2>
+      <p class="card-paragraph">
+        In a vibrant forest, Benny the bear befriends Mr. Frog, a wise little
+        frog. They explore a shimmering pond together, sharing stories and
+        laughter, and learn the value of friendship. Their adventures lead them
+        to a hidden treasure of colorful flowers, filling their hearts with joy.
+      </p>
+      <a class="play-pause" id="pause-play-button" href="#" aria-label="Play or pause the video">
+        <svg
+          class="w-6 h-6 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="80"
+          height="80"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7 6a1 1 0 0 1 2 0v4l6.4-4.8A1 1 0 0 1 17 6v12a1 1 0 0 1-1.6.8L9 14v4a1 1 0 1 1-2 0V6Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+    </main>
+  
+    <script src="../javascript/script.js" defer></script>
+  </body>
+  
+</html>
