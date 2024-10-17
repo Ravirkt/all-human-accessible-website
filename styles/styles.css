@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-image: url(../assets/woods.png), radial-gradient(#3b0951, #773580);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.mouse:hover {
+  animation: springen 0.5s ease;
+}
+
+@keyframes springen {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-60px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* positionering muis. het landschap zit in de body en de mouse image zit erboven. door absolute te maken
+kun je deze plaatsen waar ik wil ten opzichte van de de background die ik in de body heb gezet.*/
+.mouse-container {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse {
+  width: 300px;
+  height: auto;
+}
+
+/* Dit is de parentclass */
+.header-info {
+  /* Dit zorgt ervoor dat er een grid layout wordt gemaakt in dit element */
+  display: grid;
+
+  /* Dit maakt de columns aan voor de grid. in dit geval 1 column van 400px */
+  grid-template-columns: 400px;
+
+  /* Dit maakt de rows aan voor de grid, de eerste row is 50px hoog en de tweede row is 150px hoog */
+  grid-template-rows: 50px 150px;
+
+  /* Dit zorgt ervoor dat de elementen horizontaal in het midden worden geplaatst */
+  justify-content: center;
+
+  /* Dit zorgt ervoor dat de elementen verticaal in het midden worden geplaatst */
+  align-items: center;
+  /* background-color: rgba(153, 147, 158, 0.192); */
+
+  /* Dit zorgt voor een tussen ruimte tussen de grid elementen  */
+  margin: 2em;
+}
+
+/* Dit is een child-element */
+.title {
+  /* Plaatst het element in de eerste rij van de grid, met een start en eindpositie op rij 1. Ik kon hier ook alleen 1 schrijven */
+  grid-row: 1 / 1;
+
+  /* Plaatst het element in de eerste kolom van de grid, met een start- en eindpositie op kolom 1. Ik kon hier ook alleen 1 schrijven */
+  grid-column: 1 / 1;
+  font-size: xx-large;
+  /* box-shadow: 0px 0px 9px 2px black; */
+  color: rgb(0, 0, 0);
+
+  @media (max-width: 400px) {
+    font-size: large;
+    padding-left: 2em;
+  }
+}
+
+/* Dit is een child-element */
+.sub-title {
+  /* Plaatst het element in de grid tussen rij 2 en rij 3 */
+  grid-row: 2 / 3;
+
+  /* Plaatst het element in de eerste kolom van de grid, met een start- en eindpositie op kolom 1. Ik kon hier ook alleen 1 schrijven */
+  grid-column: 1 / 1;
+  font-size: medium;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+
+  @media (max-width: 400px) {
+    padding: 2em 0 0 2em;
+  }
+}
