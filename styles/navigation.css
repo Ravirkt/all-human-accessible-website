@@ -24,14 +24,12 @@ nav a {
 }
 
 nav a:hover {
-  background-color: rgb(17, 97, 14);
+  background-color: rgb(53, 99, 184);
 }
 
 a {
   text-decoration: none;
 }
-
-
 
 .ham-menu {
   /* Dit zorgt ervoor dat de navbar op het scherm blijft van de gebruiker. 
@@ -67,8 +65,6 @@ svg:hover {
 svg {
   color: black;
   margin: 10px;
-  /* background-color: rgb(94, 93, 93);
-    border-radius: 5px; */
 }
 
 /* return knop voor alsje terug wilt gaan naar all stories page */
