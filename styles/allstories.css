@@ -10,6 +10,20 @@ body {
   line-height: 1.5;
 }
 
+.return-arrow {
+  position: absolute;
+  z-index: 9999;
+  margin: 1em;
+}
+
+.return-arrow a:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
 #wave {
   margin-bottom: 5em;
 }
