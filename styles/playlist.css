@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    /* background-image: radial-gradient(#3b0951, #773580); */
+    background-image: radial-gradient(
+        49% 81% at 45% 47%,
+        #1900ff45 0%,
+        #073aff00 100%
+      ),
+      radial-gradient(113% 91% at 17% -2%, rgb(162, 179, 236) 99%, #ff000000 99%),
+      radial-gradient(142% 91% at 83% 7%, rgb(7, 16, 192) 1%, #ff000000 99%),
+      radial-gradient(142% 91% at -6% 74%, rgb(114, 115, 197) 1%, #ff000000 99%),
+      radial-gradient(142% 91% at 111% 84%, rgb(7, 129, 244) 0%, rgb(255, 255, 255) 100%);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Lilita One", sans-serif;
+}
+  
+  /* parent class grid-container */
+  .header-content {
+    /* Dit zorgt ervoor dat er een grid layout wordt gemaakt in dit element */
+    display: grid;
+  
+    /* Dit maakt de columns aan voor de grid. in dit geval zijn het drie columns van 200px , 100px en 1fr: dit maakt een column van de overgebleven ruimte */
+    grid-template-columns: 200px 100px 1fr;
+  
+    /* Dit maakt de rows aan voor de grid, de eerste row is 100px hoog en de tweede row is 100px, de derde is 200px hoog en de laaste row is 200px hoog */
+    grid-template-rows: 100px 100px 200px 200px;
+  
+    /* Dit zorgt voor een tussen ruimte tussen de grid elementen  */
+    gap: 1em;
+  }
+  
+  /* child element grid-container */
+  .header-title {
+    font-family: "Lilita One", sans-serif;
+    font-weight: bold;
+  
+    /* Plaatst het element in de grid, waarbij het zich positioneert van column 1 tot column 3 */
+    grid-column: 1 / 3;
+  
+    /* Plaatst het element in de grid, waarbij het zich positioneert van row 1 tot row 2 */
+    grid-row: 1 / 2;
+    padding-left: 1em;
+    padding-top: 1em;
+    color: rgb(0, 0, 0);
+  
+    @media (min-width: 670px) {
+      font-size: xx-large;
+    }
+  }
+  
+  /* child element grid-container */
+  .header-paragraph {
+    /* Plaatst het element in de grid, waarbij het zich positioneert van column 1 tot column 3 */
+    grid-column: 1 / 3;
+  
+    /* Plaatst het element in de grid, waarbij het zich positioneert van row 2 tot row 3 */
+    grid-row: 2 / 3;
+    padding-left: 1em;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    font-weight: 3000;
+  
+    @media (min-width: 670px) {
+      font-size: x-large;
+    }
+  }
+  
+  /* Dit is voor een image die nog moet komen in de header voor de desktop versie */
+  .header-image {
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+    max-width: 100%;
+  
+    @media (max-width: 970px) {
+      display: none;
+    }
+  }
+  
+  /* parent class grid-container for searchbar */
+  .searchbar-container {
+    /* Dit zorgt ervoor dat er een grid layout wordt gemaakt in dit element */
+    display: grid;
+  
+    /* Dit maakt de columns aan voor de grid. in dit geval een column van 300px */
+    grid-template-columns: 300px;
+  
+    /* Dit maakt de rows aan voor de grid. in dit geval een row van 50px hoog en nog een van 50px hoog */
+    grid-template-rows: 50px 50px;
+  
+    /* Dit zorgt ervoor dat de items in de grid gelijkmatig worden verdeelt */
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  /* child element grid-container */
+  .searchbar {
+    /* Plaatst het element in de eerste rij van de grid, met een start en eindpositie op rij 1. Ik kon hier ook alleen 1 schrijven */
+    grid-row: 1 / 1;
+  
+    /* Plaatst het element in de eerste kolom van de grid, met een start- en eindpositie op kolom 1. Ik kon hier ook alleen 1 schrijven */
+    grid-column: 1 / 1;
+    width: 100%;
+    height: 3em;
+    border-radius: 1.2rem;
+    border: 2px solid black;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    background-color: rgb(159, 153, 237);
+    transition: all 0.3s ease;
+    margin-bottom: -4em;
+  }
+  
+  .searchbar:hover {
+    background-color: #a2a4e9;
+  }
+  
+  /* .story-cards-container {
+      display: grid;
+      grid-template-columns: 200px 200px; 
+      grid-template-rows: 250px 250px;
+      list-style: none;
+  } */
+  
+  /* Hier wordt doormiddel van display: grid een grid layout gedefinieerd. */
+  
+  /* grid-template-column
+  Hier geef ik aan dat ik 3 kolommen wil maken eerste kolom is 100px 2de is 200px en 3de is 50px
+  Deze waardes heb ik gekozen omdat de ik de image in de eerste kolom wil de titel in de 2de en de playbutton in de derde */
+  
+  /* grid-template-rows
+  Hier geeft ik aan dat ik 1 row wil inde layout van 100px. Dit zal de hoogte weergeven van card.
+  */
+  .story-card {
+    display: grid;
+    grid-template-columns: 100px 200px 50px;
+    grid-template-rows: 100px;
+    background-color: rgba(48, 14, 220, 0.128);
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+  
+    /* Deze media querie zal worden ingeschalkeld als het schem een grootte van 720 of hoger bereikt. alle onderstaande
+    css properties worden dan toegepast. */
+  
+    /* display: inline-grid
+    Dit is hetzelfde als display:grid alleen is deze veranderd naar een inline element. display:grid is een block element
+     */
+  
+    /*grid-template-columns: 100px 1fr 50px;
+     /* Definieert de kolommen van de grid: De 1ste kolom is 100px breed, de 2de kolom neemt de rest van de beschikbare ruimte in (1fr),
+       de 3de kolom is 50px breed. */
+  
+    /* grid-template-rows: auto;
+   De rows worden nu automatisch aangepast aan de content
+   */
+  
+    /* width: calc(33.33% - 30px);
+  Dit zorgt ervoor dat de breedte van de element een derde deel ineemnt en dan wordt er 30 pixels daar vanf genomen.
+   */
+  
+    @media (min-width: 720px) {
+      display: inline-grid;
+      grid-template-columns: 100px 1fr 50px;
+      grid-template-rows: auto;
+      align-items: center;
+      background-color: rgba(153, 147, 158, 0.248);
+      padding: 20px;
+      border-radius: 5px;
+      margin: 10px;
+      width: calc(33.33% - 30px);
+      box-sizing: border-box;
+      justify-content: unset;
+  
+      @media (max-width: 800px) {
+        width: calc(50% - 30px);
+      }
+    }
+  }
+  
+  /*   grid-column: 1;
+  Hier geef ik aan dat ik wil dat de image-element wordt geplaatst vanaf de eerst lijn van de grid */
+  
+  /*     grid-row: 1;
+  Hier geef ik aan dat ik wil dat de image-element wordt geplaatst op de eerste row nummer 1 van de grid
+  */
+  
+  /* omdat ik in de parent-container heb gedefinieerd justify-content: space-evenly en align-items:center worden
+  de image , titel en play-button in het midden van de grid-block gecentreerd en gelijkmatig verdeelt in hun blok.
+   */
+  .playlist-image {
+    /* Plaatst het element in de eerste rij van de grid, met een start en eindpositie op rij 1. Ik kon hier ook alleen 1 schrijven */
+    grid-row: 1 / 1;
+  
+    /* Plaatst het element in de eerste kolom van de grid, met een start- en eindpositie op kolom 1. Ik kon hier ook alleen 1 schrijven */
+    grid-column: 1 / 1;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  
+    @media (min-width: 720px) {
+      /* grid-column: 1 / 2;
+      grid-row: 1 / 1;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; */
+      grid-column: 1 / 2;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  
+  .card-title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size:medium;
+    padding-left: 1em;
+  
+    @media (min-width: 720px) {
+      display: none;
+    }
+  }
+  
+  .card-paragraph {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    display: none;
+    color: rgb(0, 0, 0);
+  
+    @media (min-width: 720px) {
+      /* display: grid;
+      grid-column: 2 /3;
+      grid-row: 1 / 2;
+      font-size: larger; */
+      grid-column: 2 / 3;
+      margin: 0;
+      font-size: 0.7em;
+      display: unset;
+    }
+  }
+  
+  .card-play-button {
+    @media (min-width: 720px) {
+      /* grid-column: 1 / 4;
+      grid-row: 2 / 3; */
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(136, 50, 155, 0.511);
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+  
+  /* hamburger menu */
+  
+  nav ul {
+    width: 100%;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav li {
+    height: 50px;
+  }
+  
+  nav a {
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: rgb(11, 11, 11);
+  }
+  
+  nav a:hover {
+    background-color: rgb(17, 97, 14);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .hamburger-drop-down {
+    display: inline;
+    /* position: sticky; */
+  }
+  
+  .ham-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1000;
+    box-shadow: -10px 0 30px black;
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(20px);
+  }
+  
+  .ham-menu li {
+    width: 100%;
+  }
+  
+  svg:hover {
+    scale: 1.1;
+    color: rgb(255, 255, 255);
+  }
+  
+  svg {
+    color: black;
+    margin: 10px;
+    /* background-color: rgb(94, 93, 93);
+      border-radius: 5px; */
+  }
+  
+  /* .story-card {
+      display: grid;
+      grid-template-columns: 100px 200px 50px;
+      grid-template-rows: 100px;
+      background-color: rgba(153, 147, 158, 0.248);
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 10px;
+    
+      @media (min-width: 670px) {
+        grid-template-columns: 300px 300px 50px;
+        grid-template-rows: 300px;
+        justify-content:space-between;
+        
+      }
+    }
+    
+    .playlist-image {
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    
+      @media (min-width: 670px) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 1;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    
+    .card-title {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      font-size: medium;
+      padding-left: 1em;
+    
+      @media (min-width: 670px) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 2;
+        display: none;
+      }
+    }
+    
+    .card-paragraph {
+      grid-column: 2 / 3;
+      grid-row: 1;
+      display: none;
+    
+      @media (min-width: 670px) {
+        display: grid;
+        grid-column: 2 /3;
+        grid-row: 1 / 2;
+        font-size: larger;
+      }
+    }
+    
+    .card-play-button {
+      @media (min-width: 670px) {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        background-color: rgba(86, 151, 151, 0.511);
+      }
+    } */
+  
