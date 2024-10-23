@@ -30,6 +30,7 @@ De storiespagina geeft een overzicht van alle huidige verhalen. Dit maakt het ge
 
 
 <img src="./assets/iphone-view-1.jpg" alt="iphone-view-1" style="width:400px;"/>
+<img src="./assets/macbook-pro-view.jpg" alt="macbook-pro-view-1" style="width:400px;"/>
 
 
 
