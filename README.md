@@ -29,10 +29,8 @@ De storiespagina geeft een overzicht van alle huidige verhalen. Dit maakt het ge
 
 
 
-<img src="./assets/images-readme/macbook-pro.jpeg" alt="macbook-pro-view" style="width:400px;"/>
-<img src="./assets/images-readme/iphone-playlist.jpeg" alt="iphone-view-1" style="width:400px;"/>
-<img src="./assets/images-readme/iphone-story.jpeg" alt="iphone-view-2" style="width:400px;"/>
-<img src="./assets/images-readme/iphone-story-2.jpeg" alt="iphone-view-3" style="width:400px;"/>
+<img src="./assets/iphone-view-1.jpg" alt="iphone-view-1" style="width:400px;"/>
+
 
 
 ## Kenmerken
