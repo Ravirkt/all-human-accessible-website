@@ -2,29 +2,22 @@ body {
   margin: 0;
   padding: 0;
   background-size: cover;
-  background-image: url(../assets/woods.png), radial-gradient(#3b0951, #773580);
-  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(
+      49% 81% at 45% 47%,
+      #1900ff45 0%,
+      #073aff00 100%
+    ),
+    radial-gradient(113% 91% at 17% -2%, rgb(162, 179, 236) 99%, #ff000000 99%),
+    radial-gradient(142% 91% at 83% 7%, rgb(7, 16, 192) 1%, #ff000000 99%),
+    radial-gradient(142% 91% at -6% 74%, rgb(114, 115, 197) 1%, #ff000000 99%),
+    radial-gradient(142% 91% at 111% 84%, rgb(7, 129, 244) 0%, rgb(255, 255, 255) 100%);
   background-attachment: fixed;
   background-position: center;
-  font-family: "Courier New", Courier, monospace;
-}
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: "Lilita One", sans-serif;
 
-.mouse:hover {
-  animation: springen 0.5s ease;
-}
-
-@keyframes springen {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-60px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
 }
 
 /* positionering muis. het landschap zit in de body en de mouse image zit erboven. door absolute te maken
@@ -39,6 +32,10 @@ kun je deze plaatsen waar ik wil ten opzichte van de de background die ik in de 
 .mouse {
   width: 300px;
   height: auto;
+
+  @media (max-width: 320px) {
+    width: 150px;
+  }
 }
 
 /* Dit is de parentclass */
@@ -73,10 +70,12 @@ kun je deze plaatsen waar ik wil ten opzichte van de de background die ik in de 
   font-size: xx-large;
   /* box-shadow: 0px 0px 9px 2px black; */
   color: rgb(0, 0, 0);
+  font-family: "Lilita One", sans-serif;
 
-  @media (max-width: 400px) {
+
+  @media (max-width: 320px) {
     font-size: large;
-    padding-left: 2em;
+    padding-left: 4em;
   }
 }
 
@@ -90,8 +89,11 @@ kun je deze plaatsen waar ik wil ten opzichte van de de background die ik in de 
   font-size: medium;
   color: rgb(0, 0, 0);
   font-weight: 500;
+  font-family: "Lilita One", sans-serif;
 
-  @media (max-width: 400px) {
-    padding: 2em 0 0 2em;
+
+  @media (max-width: 320px) {
+    font-size: small;
+    padding-left: 4em;
   }
 }
