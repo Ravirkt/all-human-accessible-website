@@ -1,20 +1,30 @@
 
 
 // hamburger menu voor het openen en sluiten van de menu
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const closeMenuButton = document.getElementById('close-menu');
-    const hammenu = document.querySelector('.ham-menu');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const menuToggle = document.getElementById('menu-toggle');
+//     const closeMenuButton = document.getElementById('close-menu');
+//     const hammenu = document.querySelector('.ham-menu');
 
-    menuToggle.addEventListener('click', function() {
-        hammenu.classList.add('active'); 
-    });
+//     menuToggle.addEventListener('click', function() {
+//         hammenu.classList.add('active'); 
+//     });
 
-    closeMenuButton.addEventListener('click', function() {
-        hammenu.classList.remove('active'); 
-    });
-});
+//     closeMenuButton.addEventListener('click', function() {
+//         hammenu.classList.remove('active'); 
+//     });
+// });
 
+
+function openmenu() {
+    const hammenu = document.querySelector('.test')
+    hammenu.style.display = 'flex';
+}
+
+function closemenu() {
+    const hammenu = document.querySelector('.ham-menu')
+    hammenu.style.display = 'none';
+}
 
 
 
