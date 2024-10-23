@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tumi Mundo</title>
-  <link rel="stylesheet" href="./styles/styles.css" />
-  <link rel="stylesheet" href="./styles/navigation.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tumi Mundo</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/navigation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet" />
+  </head>
 
-<body>
-  <header>
-    <section class="hamburger-drop-down">
-      <button id="menu-toggle" aria-label="Open menu">
-        <svg
-          class="w-6 h-6 text-gray-800 dark:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="60"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-width="2"
-            d="M5 7h14M5 12h14M5 17h14"
-          />
-        </svg>
-      </button>
-    </section>
+  <body>
+    <header>
+      <section class="hamburger-drop-down" onclick="openmenu()" role="button" tabindex="0" aria-label="Open menu">
+        <a href="#">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="60"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M5 7h14M5 12h14M5 17h14"
+            />
+          </svg>
+        </a>
+      </section>
 
-    <nav>
-      <ul class="navbar-items-container ham-menu test">
-        <li>
-          <button id="close-menu" aria-label="Close menu">
-            <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 12h14M5 12l4-4m-4 4 4 4"
-              />
-            </svg>
-          </button>
-        </li>
-        <li><a href="./playlist.html">Stories</a></li>
-        <li><a href="#" aria-label="Testing section">Testing</a></li>
-        <li><a href="#" aria-label="Statistics section">Statistics</a></li>
-        <li><a href="#" aria-label="Settings section">Settings</a></li>
-        <li><a href="./index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+      <nav>
+        <ul class="navbar-items-container ham-menu test" role="navigation">
+          <li onclick="closemenu()" aria-label="Close menu">
+            <a href="#">
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 12h14M5 12l4-4m-4 4 4 4"
+                />
+              </svg>
+            </a>
+          </li>
+          <li><a href="./html/allstories.html">Stories</a></li>
+          <li><a href="#">Testing</a></li>
+          <li><a href="#">Statistics</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="./index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <article class="mouse-container">
-      <img class="mouse" src="./assets/mouse.png" alt="An image of a mouse" />
-    </article>
+    <main>
+      <article class="mouse-container" role="img" aria-label="Mouse image">
+        <img class="mouse" src="./assets/mouse.png" alt="Een afbeelding van een muis" />
+      </article>
 
-    <section class="header-info">
-      <h1 class="title">TUMI MUNDO</h1>
-      <p class="sub-title">
-        Boost their brain activity while they explore vibrant characters and
-        thrilling adventures in a new language. This fun and engaging
-        experience not only enhances language skills but also fosters
-        curiosity and creativity. Start today and watch your child's world
-        expand!
-      </p>
-    </section>
-  </main>
+      <section class="header-info">
+        <h1 class="title">TUMI MUNDO</h1>
+        <!-- <p class="sub-title">
+          Boost their brain activity while they explore vibrant characters and
+          thrilling adventures in a new language. This fun and engaging
+          experience not only enhances language skills but also fosters
+          curiosity and creativity. Start today and watch your child's world
+          expand!
+        </p> -->
+      </section>
+    </main>
 
-  <script src="./scripts/script.js" defer></script>
-</body>
+    <script src="./javascript/script.js" defer></script>
+  </body>
 </html>
