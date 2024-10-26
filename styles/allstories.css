@@ -13,7 +13,7 @@ body {
 .return-arrow {
   position: absolute;
   z-index: 9999;
-  margin: 1em;hghgjh
+  margin: 1em;
 }
 
 .return-arrow a:hover {
@@ -225,16 +225,7 @@ select:focus {
   flex-grow: 1;
 }
 
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.card-header h3 {
-  font-size: 1.2em;
-  color: #333;
-}
 
 .flag-icon {
   scale: 0.8;
